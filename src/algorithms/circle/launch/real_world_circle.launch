@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<launch>
+
+  <include file="$(find racecar)/launch/teleop.launch"/>
+
+  <node pkg="circle" name="control_node" type="control.py" output="screen"/>
+  <node pkg="circle" name="sim_connector_node" type="sim_connector.py" output="screen"/>
+
+</launch>

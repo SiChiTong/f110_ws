@@ -1,0 +1,8 @@
+prefix=/home/nvidia/Desktop/f110_ws/devel
+
+Name: vesc_msgs
+Description: Description of vesc_msgs
+Version: 0.0.1
+Cflags: -I/home/nvidia/Desktop/f110_ws/devel/include
+Libs: -L/home/nvidia/Desktop/f110_ws/devel/lib 
+Requires: std_msgs message_runtime

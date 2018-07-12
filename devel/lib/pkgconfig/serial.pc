@@ -1,0 +1,8 @@
+prefix=/home/nvidia/Desktop/f110_ws/devel
+
+Name: serial
+Description: Description of serial
+Version: 1.2.1
+Cflags: -I/home/nvidia/Desktop/f110_ws/src/system/serial/include
+Libs: -L/home/nvidia/Desktop/f110_ws/devel/lib -lserial -lrt -lpthread
+Requires: 

@@ -1,0 +1,8 @@
+prefix=/home/nvidia/Desktop/f110_ws/devel
+
+Name: waypoint_logger
+Description: Description of waypoint_logger
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/nvidia/Desktop/f110_ws/devel/lib 
+Requires: 

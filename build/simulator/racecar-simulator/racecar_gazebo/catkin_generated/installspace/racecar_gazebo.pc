@@ -1,0 +1,8 @@
+prefix=/home/nvidia/Desktop/f110_ws/install
+
+Name: racecar_gazebo
+Description: Description of racecar_gazebo
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/nvidia/Desktop/f110_ws/install/lib 
+Requires: 

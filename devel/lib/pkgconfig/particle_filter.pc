@@ -1,0 +1,8 @@
+prefix=/home/nvidia/Desktop/f110_ws/devel
+
+Name: particle_filter
+Description: Description of particle_filter
+Version: 0.1.0
+Cflags: 
+Libs: -L/home/nvidia/Desktop/f110_ws/devel/lib 
+Requires: message_runtime rospy sensor_msgs std_msgs
