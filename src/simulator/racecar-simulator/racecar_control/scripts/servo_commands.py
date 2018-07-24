@@ -19,8 +19,16 @@ def set_throttle_steer(data):
     pub_pos_left_steering_hinge = rospy.Publisher('/racecar/left_steering_hinge_position_controller/command', Float64, queue_size=1)
     pub_pos_right_steering_hinge = rospy.Publisher('/racecar/right_steering_hinge_position_controller/command', Float64, queue_size=1)
 
-    throttle = data.drive.speed/0.1
+    # Velocity is in terms of radians per second.
+    # Want to go 1 m/s with a wheel of radius 0.05m. This translates to 19.97 radians per second, roughly 20.
+    # However, at a multiplication factor of 20 speed is half of what it should be, so doubled to 40.
+    throttle = data.drive.speed * 40.0
+    
+    
+    # Here we want steering angle to be broken down into Ackermann for left and right.
     steer = data.drive.steering_angle
+    steer_left =  0.419 # 24 degrees left
+    steer_right = 0.349 # 20 degrees left
 
     pub_vel_left_rear_wheel.publish(throttle)
     pub_vel_right_rear_wheel.publish(throttle)

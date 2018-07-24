@@ -11,9 +11,8 @@ import csv
 import os
 import pdb
 
-LOOKAHEAD_DISTANCE = 1.5 # meters
-servo_offset = 0.0
-velocity = 1.00 # m/s
+LOOKAHEAD_DISTANCE = 3.0 # meters
+velocity = 1.5 # m/s
 	
 # import waypoints.csv into a list
 dirname = os.path.dirname(__file__)
@@ -21,7 +20,7 @@ filename = os.path.join(dirname, '../waypoints/levine-waypoints.csv')
 with open(filename) as f:
 	path_points = [tuple(line) for line in csv.reader(f)]
 		
-pub = rospy.Publisher('drive_parameters', drive_param, queue_size=1)
+pub = rospy.Publisher('drive_parameters', drive_param, queue_size=0)
 
 
 def callback(data):

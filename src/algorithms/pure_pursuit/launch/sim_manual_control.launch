@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<launch>
+
+  	<include file="$(find racecar_gazebo)/launch/racecar.launch">
+		<arg name="world_name" value="track_empty"/>
+  	</include>
+  	
+  	<remap from="low_level/ackermann_cmd_mux/input/teleop" to="/vesc/ackermann_cmd_mux/input/teleop"/>
+  	<include file="$(find racecar_control)/launch/teleop.launch"/>
+  
+</launch>

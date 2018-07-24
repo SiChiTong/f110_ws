@@ -32,8 +32,8 @@ vesc_driver:
   current_max: 20.0
   brake_min: -20000.0
   brake_max: 200000.0
-  speed_min: -15000
-  speed_max: 15000 # modified to go faster
+  speed_min: -10000
+  speed_max: 10000 # modified to go faster
   position_min: 0.0
   position_max: 0.0
   servo_min: 0.04 # manually looked at wheels to set the limits

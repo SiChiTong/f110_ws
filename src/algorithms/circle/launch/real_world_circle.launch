@@ -3,6 +3,7 @@
 
   <include file="$(find racecar)/launch/teleop.launch"/>
 
+<!--  This drives the car in a circle at a constant velocity set in control.py.-->
   <node pkg="circle" name="control_node" type="control.py" output="screen"/>
   <node pkg="circle" name="sim_connector_node" type="sim_connector.py" output="screen"/>
 
